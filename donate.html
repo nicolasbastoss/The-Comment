@@ -134,6 +134,11 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+    .amount.selected {
+  background: #000;
+  color: #fff;
+}
+
   </style>
 </head>
 <body>
@@ -151,13 +156,16 @@
 
     <div class="donate-box">
       <div class="donate-options">
-        <div class="amount">$5</div>
-        <div class="amount">$10</div>
-        <div class="amount">$25</div>
-        <div class="amount">$50</div>
+       <div class="amount" data-amount="5">$5</div>
+      <div class="amount" data-amount="10">$10</div>
+      <div class="amount" data-amount="25">$25</div>
+      <div class="amount" data-amount="50">$50</div>
       </div>
 
-      <a href="#" class="donate-button">Proceed to Donate</a>
+      <a href="#" class="donate-button" id="donateBtn">
+  Proceed to Donate
+</a>
+
 
       <p class="note">
         Donations are optional. Reading is free. Always.
@@ -168,6 +176,41 @@
       Thank you for reading · The Comment
     </footer>
   </div>
+
+  <script>
+  let selectedAmount = null;
+
+  const amounts = document.querySelectorAll(".amount");
+  const donateBtn = document.getElementById("donateBtn");
+
+  amounts.forEach(el => {
+    el.addEventListener("click", () => {
+      amounts.forEach(a => a.classList.remove("selected"));
+      el.classList.add("selected");
+      selectedAmount = el.dataset.amount;
+    });
+  });
+
+  donateBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (!selectedAmount) {
+      alert("Please select an amount.");
+      return;
+    }
+
+    // REPLACE these with your real links
+    const links = {
+      5: "https://buy.stripe.com/test_3cIcMXgPkacC54jbEB8k800",
+      10: "https://buy.stripe.com/test_14A9ALbv0esSeET7ol8k801",
+      25: "https://buy.stripe.com/test_6oUbIT2Yu0C20O32418k802",
+      50: "https://buy.stripe.com/test_14A14faqWdoO1S70ZX8k803"
+    };
+
+    window.open(links[selectedAmount], "_blank");
+  });
+</script>
+
 
 </body>
 </html>
