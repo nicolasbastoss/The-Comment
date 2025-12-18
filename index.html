@@ -137,11 +137,51 @@
     .article-body p {
       margin-bottom: 18px;
     }
+    .donation {
+  margin: 40px 0;
+}
+
+.donation-box {
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.donation-label {
+  font-size: 13px;
+  opacity: 0.45;
+  margin: 0;
+}
+
+.donation-text {
+  font-size: 15px;
+  opacity: 0.75;
+  margin: 0;
+  max-width: none;
+}
+
+.donation-button {
+  font-size: 13px;
+  padding: 6px 14px;
+  border: 1px solid #000;
+  border-radius: 999px;
+}
+
+
+
 
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    @media (min-width: 641px) {
+  .donation {
+    display: none;
+  }
+}
 
     @media (max-width: 640px) {
 
@@ -211,6 +251,26 @@
     font-size: 13px;
     margin-top: 60px;
   }
+
+   .donation {
+    margin: 40px 0;
+  }
+
+  .donation-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .donation-text {
+    font-size: 17px;
+  }
+
+  .donation-button {
+    margin-top: 10px;
+    align-self: stretch;
+    text-align: center;
+  }
 }
 
   </style>
@@ -243,6 +303,17 @@
         <h3>NEW CAFÉS ARE BORING AGAIN</h3>
       </div>
 
+      <div class="donation">
+  <div class="donation-box">
+    <p class="donation-label">SUPPORT THE COMMENT</p>
+    <p class="donation-text">
+      Independent writing. No ads. No noise.
+    </p>
+    <a href="donate.html" class="donation-button">Donate</a>
+  </div>
+</div>
+
+
       <div class="tiny" onclick="openArticle('offline')">
         <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
         <h3>WHY EVERYONE IS SUDDENLY OFFLINE</h3>
@@ -250,7 +321,8 @@
     </div>
 
     <footer>
-      Made by Nicolas · Independent Editorial Project
+      Made by Nicolas · Independent Editorial Project |
+       <a href="donate.html"> Support The Comment</a>
     </footer>
   </div>
 
@@ -327,4 +399,3 @@
 
 </body>
 </html>
-
