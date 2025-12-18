@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support The Comment</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #000;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: -0.04em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 60px auto;
+      padding: 0 20px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .back {
+      font-size: 14px;
+      opacity: 0.6;
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 44px;
+      margin: 0 0 14px;
+      font-weight: 400;
+    }
+
+    .intro {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19px;
+      line-height: 1.65;
+      color: #111;
+      margin-bottom: 40px;
+    }
+
+    .donate-box {
+      border: 1px solid #000;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 40px;
+    }
+
+    .donate-options {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .amount {
+      border: 1px solid #000;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .amount:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    .donate-button {
+      display: inline-block;
+      border: 1px solid #000;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 15px;
+      transition: background 0.2s ease;
+    }
+
+    .donate-button:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    .note {
+      font-size: 14px;
+      opacity: 0.6;
+      margin-top: 20px;
+      max-width: 420px;
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        margin: 40px auto;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .intro {
+        font-size: 18px;
+      }
+
+      .donate-box {
+        padding: 22px;
+      }
+
+      .donate-button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+    <a href="index.html" class="back">← Back to The Comment</a>
+
+    <h1>SUPPORT THE COMMENT</h1>
+
+    <p class="intro">
+      The Comment is an independent editorial project.
+      It is written without ads, sponsors, or algorithms deciding what matters.
+      Support keeps it small, slow, and honest.
+    </p>
+
+    <div class="donate-box">
+      <div class="donate-options">
+        <div class="amount">$5</div>
+        <div class="amount">$10</div>
+        <div class="amount">$25</div>
+        <div class="amount">$50</div>
+      </div>
+
+      <a href="#" class="donate-button">Proceed to Donate</a>
+
+      <p class="note">
+        Donations are optional. Reading is free. Always.
+      </p>
+    </div>
+
+    <footer>
+      Thank you for reading · The Comment
+    </footer>
+  </div>
+
+</body>
+</html>
